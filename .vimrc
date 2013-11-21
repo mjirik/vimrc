@@ -378,7 +378,8 @@ set laststatus=2
 
 
 "" Setting for vim-fugitive
-map <leader>g :Gstatus<CR>
+map <leader>gs :Gstatus<CR>
+map <leader>gc :Gcommit<CR>
 
 
 
@@ -396,7 +397,7 @@ let g:ctrlp_max_height = 30
 "let g:jedi#related_names_command = "<leader>z"
 "let g:jedi#popup_on_dot = 0
 "let g:jedi#popup_select_first = 0
-"map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"map <Leader>b Oimport ipdb; ipdb.set_trace()  # BREAKPOINT<C-c>
 
 
 " Settings for python-mode
@@ -404,9 +405,9 @@ let g:ctrlp_max_height = 30
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
+"map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_goto_def_newwin = "hnew"
 let g:pymode_rope_extended_complete = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
