@@ -1,5 +1,4 @@
-" https://github.com/sontek/dotfiles/
-" ==========================================================
+==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
 " Pep8 - http://pypi.python.org/pypi/pep8
@@ -380,6 +379,8 @@ set laststatus=2
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
+map <leader>gh :Gpush<CR>
+map <leader>gl :Gpull<CR>
 
 
 
@@ -405,7 +406,7 @@ let g:ctrlp_max_height = 30
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"map <Leader>g :call RopeGotoDefinition()<CR>
+"map <Leader>j :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
 let g:pymode_rope_goto_def_newwin = "hnew"
 let g:pymode_rope_extended_complete = 1
