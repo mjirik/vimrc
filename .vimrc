@@ -379,8 +379,8 @@ set laststatus=2
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
-map <leader>gh :Gpush<CR>
-map <leader>gl :Gpull<CR>
+map <leader>gh :Git push<CR>
+map <leader>gl :Git pull<CR>
 
 
 
