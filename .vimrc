@@ -408,7 +408,7 @@ let g:ctrlp_max_height = 30
 " git clone https://github.com/klen/python-mode
 "map <Leader>j :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "hnew"
+let g:pymode_rope_goto_def_newwin = "vnew"
 let g:pymode_rope_extended_complete = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
