@@ -3,7 +3,15 @@ sudo apt-get install curl
 
 
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
-wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+
+curl -so ~/.vim/colors/wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+
+cd ~/.vim/
+
+git pull git@github.com:mjirik/vimrc.git
+
+
+#wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 
 
 mkdir -p ~/.vim/bundle
@@ -11,6 +19,8 @@ mkdir -p ~/.vim/autoload
 curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 
 #cp ./.vimrc ~/.vimrc
+
+cd ~/.vim/ 
 
 ln -s `pwd`/.vimrc ~/
 
