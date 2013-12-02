@@ -1,6 +1,14 @@
 #!
+
+# Ubuntu
 sudo apt-get install curl
 
+
+#mac os
+sudo port install py-pep8
+
+
+# -------
 
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
 
