@@ -10,11 +10,15 @@ sudo port install py-pep8
 
 # -------
 
+echo "delete old .vimrc  `pwd`"
+mv ~/.vimrc ~/.vimrc.bck
+
+ln -s `pwd`/.vimrc ~/
+#cd ~/.vim/
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
 
 curl -so ~/.vim/colors/wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 
-#cd ~/.vim/
 
 #git pull git@github.com:mjirik/vimrc.git
 
@@ -28,9 +32,6 @@ curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/
 
 #cp ./.vimrc ~/.vimrc
 
-rm ~/.vimrc
-
-ln -s `pwd`/.vimrc ~/
 
 cd ~/.vim/ 
 
