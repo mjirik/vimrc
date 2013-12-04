@@ -20,9 +20,12 @@ curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/
 
 #cp ./.vimrc ~/.vimrc
 
-cd ~/.vim/ 
+rm ~/.vimrc
 
 ln -s `pwd`/.vimrc ~/
+
+cd ~/.vim/ 
+
 
 
 cd ~/.vim/bundle
