@@ -65,6 +65,9 @@
 " MakeGreen
 "    Generic test runner that works with nose
 "
+" TagList
+"    List of functions
+"
 " ==========================================================
 " Shortcuts
 " ==========================================================
@@ -415,6 +418,10 @@ let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
+
+" Taglist setup
+"
+autocmd BufWritePost *.py :TlistUpdate
 
 
 "" Python
