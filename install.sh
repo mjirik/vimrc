@@ -12,8 +12,14 @@ sudo port install py-pep8
 
 echo "delete old .vimrc  `pwd`"
 mv ~/.vimrc ~/.vimrc.bck
+mv -f ~/.vim/ftplugin ~/.vim/ftplugin.bck
+
 
 ln -s `pwd`/.vimrc ~/
+
+# file type setup
+ln -s `pwd`/_vim/ftplugin ~/.vim/
+
 #cd ~/.vim/
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
 
@@ -50,5 +56,6 @@ git clone https://github.com/gerw/vim-latex-suite.git
 
 #mkdir -p ~/.vim/ftplugin
 #wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+
 
 
