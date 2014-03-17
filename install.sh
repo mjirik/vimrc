@@ -45,7 +45,8 @@ git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/sjl/gundo.vim.git
 git clone https://github.com/klen/python-mode
 git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/vim-scripts/taglist.vim.git
+git clone https://github.com/vim-scripts/taglist.vim.git
+git clone https://github.com/gerw/vim-latex-suite.git
 
 #mkdir -p ~/.vim/ftplugin
 #wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
