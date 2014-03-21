@@ -195,8 +195,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/taglist.vim'
-Bundle 'gerw/vim-latex-suite'
-Bundle 'vim-scripts/wombat256.vim'
+"Bundle 'gerw/vim-latex-suite'
+"Bundle 'vim-scripts/wombat256.vim'
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 "Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
