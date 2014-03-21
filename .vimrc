@@ -175,17 +175,22 @@ filetype off
 "
 " Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+"let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/neobundle/README.md')
 if !filereadable(vundle_readme)
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    "silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    silent !git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle
+    
     let iCanHazVundle=0
 endif
-set rtp+=~/.vim/bundle/vundle/
+"set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/neobundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
+Bundle 'Shoguo/neobundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -196,7 +201,7 @@ Bundle 'klen/python-mode'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/taglist.vim'
 "Bundle 'gerw/vim-latex-suite'
-"Bundle 'vim-scripts/wombat256.vim'
+Bundle 'vim-scripts/wombat256.vim'
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 "Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
@@ -205,7 +210,7 @@ Bundle 'vim-scripts/taglist.vim'
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
-    :BundleInstall
+    :NeoBundleInstall
 endif
 
 "set rtp+=~/.vim/bundle/vundle/
