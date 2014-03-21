@@ -90,6 +90,12 @@ nmap <leader>sb :call SplitScroll()<CR>
 
 "<CR><C-w>l<C-f>:set scrollbind<CR>
 
+" chage window with Ctrl-j
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
 " sudo write this
 cmap W! w !sudo tee % >/dev/null
 
@@ -120,11 +126,6 @@ nmap <leader>cc :cclose<CR>
 " for when we forget to use sudo to open/edit a file
 cmap w!! w !sudo tee % >/dev/null
 
-" ctrl-jklm  changes to that split
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 
 " and lets make these all work in insert mode too ( <C-O> makes next cmd
 "  happen as if in command mode )
@@ -162,8 +163,55 @@ map <leader>r :RopeRename<CR>
 " ==========================================================
 " Load pathogen with docs for all plugins
 filetype off
-call pathogen#incubate()
-call pathogen#helptags()
+"filetype on
+"filetype plugin indent on     " enable loading indent file for filetype
+"call pathogen#incubate()
+"call pathogen#helptags()
+
+
+"========
+"vundle
+"========
+"
+" Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'sjl/gundo.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'gerw/vim-latex-suite'
+"Add your bundles here
+"Bundle 'Syntastic' "uber awesome syntax and errors highlighter
+"Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
+"Bundle 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
+"...All your other bundles...
+if iCanHazVundle == 0
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :BundleInstall
+endif
+
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"
+"Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-easymotion'
 
 " ==========================================================
 " Basic Settings
@@ -225,6 +273,10 @@ set matchpairs+=<:>         " show matching <> (html mainly) as well
 set foldmethod=indent       " allow us to fold on indents
 set foldlevel=99            " don't fold by default
 
+
+" ctrl-jklm  changes to that split
+if &filetype != 'tex'
+endif
 
 "" change color of cursor in insert mode
 "if &term =~ "xterm\\|rxvt"
