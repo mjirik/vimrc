@@ -11,8 +11,9 @@ sudo port install py-pep8
 # -------
 
 echo "delete old .vimrc  `pwd`"
-mv ~/.vimrc ~/.vimrc.bck
-mv ~/.vim ~/.vim.bck
+mv -f ~/.vimrc ~/.vimrc.bck
+rm -rf ~/.vim.bck
+mv -f ~/.vim ~/.vim.bck
 
 
 git clone git@github.com:mjirik/vimrc.git ~/.vim
