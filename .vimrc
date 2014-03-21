@@ -188,20 +188,22 @@ if !filereadable(vundle_readme)
 endif
 "set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/bundle/neobundle/
-call vundle#rc()
+"call vundle#rc()
+call neobundle#rc(expand('~/.vim/bundle'))
 "Bundle 'gmarik/vundle'
-Bundle 'Shoguo/neobundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
+NeoBundle 'Shoguo/neobundle'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'klen/python-mode'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vim-scripts/wombat256.vim'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundleLazy 'gerw/vim-latex-suite'
+autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'sjl/gundo.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'klen/python-mode'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/taglist.vim'
-"Bundle 'gerw/vim-latex-suite'
-Bundle 'vim-scripts/wombat256.vim'
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 "Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
