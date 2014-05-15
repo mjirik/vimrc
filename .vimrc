@@ -40,6 +40,7 @@
 "     Runs your Python tests in Vim.
 "
 " Commant-T
+"
 "     Allows easy search and opening of files within a given path
 "
 " Snipmate
@@ -201,6 +202,11 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/wombat256.vim'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
+NeoBundle 'tomtom/tlib_vim'  " required by snipmate
+NeoBundle 'garbas/vim-snipmate'
+"NeoBundle 'aperezdc/vim-template'
+"NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
