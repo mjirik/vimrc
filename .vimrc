@@ -205,7 +205,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
 NeoBundle 'tomtom/tlib_vim'  " required by snipmate
 NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'pypi/rope'
+"NeoBundle 'pypi/rope'
 NeoBundle 'tell-k/vim-autopep8'
 "NeoBundle 'aperezdc/vim-template'
 "NeoBundle 'honza/vim-snippets'
