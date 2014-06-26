@@ -101,10 +101,11 @@ map <c-h> <c-w>h
 cmap W! w !sudo tee % >/dev/null
 
 " Toggle the tasklist
-map <leader>td <Plug>TaskList
+map <Leader>td <Plug>TaskList
 
 " Run pep8
-let g:pep8_map='<leader>8'
+" let g:pep8_map='<leader>8'
+" it is actualy python mode automatically
 
 " run py.test's
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
@@ -144,7 +145,10 @@ vnoremap < <gv " better identation
 vnoremap > >gv " better identation
 
 " Open NerdTree
-map <leader>t :NERDTreeToggle<CR>
+" map <leader>t :NERDTreeToggle<CR>
+
+" Open Tlist"
+map <leader>T :TlistOpen<CR>
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
@@ -155,10 +159,12 @@ nmap <leader>a <Esc>:Ack!
 map <leader>u :GundoToggle<CR>
 
 " Jump to the definition of whatever the cursor is on
-map <leader>j :RopeGotoDefinition<CR>
+" map <leader>j :RopeGotoDefinition<CR>
+" it is actualy python mode with <C-c>g
 
 " Rename whatever the cursor is on (including references to it)
-map <leader>r :RopeRename<CR>
+" map <leader>r :RopeRename<CR>
+" it is actualy python mode with <C-c>rr
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -204,11 +210,12 @@ NeoBundle 'vim-scripts/wombat256.vim'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
 NeoBundle 'tomtom/tlib_vim'  " required by snipmate
-NeoBundle 'garbas/vim-snipmate'
 "NeoBundle 'pypi/rope'
 NeoBundle 'tell-k/vim-autopep8'
 "NeoBundle 'aperezdc/vim-template'
-"NeoBundle 'honza/vim-snippets'
+NeoBundle 'vim-scripts/TaskList.vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
