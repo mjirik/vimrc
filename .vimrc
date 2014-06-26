@@ -101,19 +101,19 @@ map <c-h> <c-w>h
 cmap W! w !sudo tee % >/dev/null
 
 " Toggle the tasklist
-map <Leader>td <Plug>TaskList
+map <Leader>Td <Plug>TaskList
 
 " Run pep8
 " let g:pep8_map='<leader>8'
 " it is actualy python mode automatically
 
 " run py.test's
-nmap <silent><Leader>tf <Esc>:Pytest file<CR>
-nmap <silent><Leader>tc <Esc>:Pytest class<CR>
-nmap <silent><Leader>tm <Esc>:Pytest method<CR>
-nmap <silent><Leader>tn <Esc>:Pytest next<CR>
-nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
-nmap <silent><Leader>te <Esc>:Pytest error<CR>
+nmap <silent><Leader>Tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>Tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>Tm <Esc>:Pytest method<CR>
+nmap <silent><Leader>Tn <Esc>:Pytest next<CR>
+nmap <silent><Leader>Tp <Esc>:Pytest previous<CR>
+nmap <silent><Leader>Te <Esc>:Pytest error<CR>
 
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
@@ -148,7 +148,7 @@ vnoremap > >gv " better identation
 " map <leader>t :NERDTreeToggle<CR>
 
 " Open Tlist"
-map <leader>T :TlistOpen<CR>
+map <leader>t :TlistOpen<CR>
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
