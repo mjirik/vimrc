@@ -495,7 +495,7 @@ let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 
 
-seg nrformats-=octal
+set nrformats-=octal
 " Taglist setup
 "
 autocmd BufWritePost *.py :TlistUpdate
