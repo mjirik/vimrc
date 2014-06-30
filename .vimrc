@@ -216,6 +216,7 @@ NeoBundle 'tell-k/vim-autopep8'
 NeoBundle 'vim-scripts/TaskList.vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
