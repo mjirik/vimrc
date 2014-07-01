@@ -190,7 +190,7 @@ if !filereadable(vundle_readme)
     silent !mkdir -p ~/.vim/bundle
     "silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     silent !git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle
-    
+
     let iCanHazVundle=0
 endif
 "set rtp+=~/.vim/bundle/vundle/
@@ -216,13 +216,14 @@ NeoBundle 'tell-k/vim-autopep8'
 NeoBundle 'vim-scripts/TaskList.vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
+"NeoBundle 'alfredodeza/pytest.vim'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 "Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
-"Bundle 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
+"Bundle 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal
 "...All your other bundles...
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
