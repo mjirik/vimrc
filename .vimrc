@@ -217,6 +217,7 @@ NeoBundle 'vim-scripts/TaskList.vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
 "NeoBundle 'alfredodeza/pytest.vim'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -493,9 +494,10 @@ let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 
 
+set nrformats-=octal
 " Taglist setup
 "
 autocmd BufWritePost *.py :TlistUpdate
