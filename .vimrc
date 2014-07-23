@@ -72,6 +72,7 @@
 " Shortcuts
 " ==========================================================
 " <C-c>rr - refractoring
+" Press <F8> to run autopep8 on it
 
 
 
