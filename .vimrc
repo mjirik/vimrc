@@ -10,63 +10,6 @@
 " ==========================================================
 " Plugins included
 " ==========================================================
-" Pathogen
-"     Better Management of VIM plugins
-"     Setup Pathogen to manage your plugins
-"     mkdir -p ~/.vim/autoload ~/.vim/bundle
-"     curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-"     Now you can install any plugin into a .vim/bundle/plugin-name/ folder
-""    call pathogen#infect()
-"
-" Fugitive
-"    Interface with git from vim
-"    cd ~/.vim/bundle && git clone https://github.com/tpope/vim-fugitive.git
-"
-" CtrlP
-"    Full path fuzzy finder
-"    cd ~/.vim/bundle
-"    git clone https://github.com/kien/ctrlp.vim.git
-"
-" GunDo
-"     git clone https://github.com/sjl/gundo.vim.git
-"
-"     Visual Undo in vim with diff's to check the differences
-"
-" Python-mode
-"     git clone https://github.com/klen/python-mode
-"     Rope and so on
-"
-" Pytest
-"     Runs your Python tests in Vim.
-"
-" Commant-T
-"
-"     Allows easy search and opening of files within a given path
-"
-" Snipmate
-"     Configurable snippets to avoid re-typing common comands
-"
-" PyFlakes
-"     Underlines and displays errors with Python on-the-fly
-"
-"
-" Git
-"    Syntax highlighting for git config files
-"
-" Pydoc
-"    Opens up pydoc within vim
-"
-" Surround
-"    Allows you to surround text with open/close tags
-"
-" Py.test
-"    Run py.test test's from within vim
-"
-" MakeGreen
-"    Generic test runner that works with nose
-"
-" TagList
-"    List of functions
 "
 " ==========================================================
 " Shortcuts
@@ -218,6 +161,8 @@ NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
 "NeoBundle 'alfredodeza/pytest.vim'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'Shougo/unite.vim'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -303,29 +248,6 @@ set foldlevel=99            " don't fold by default
 if &filetype != 'tex'
 endif
 
-"" change color of cursor in insert mode
-"if &term =~ "xterm\\|rxvt"
-"      " use an orange cursor in insert mode
-"      " let &t_SI = "\<Esc>]12;orange\x7"
-"      let &t_SI = "\<Esc>]12;gray\x7"
-"      " use a red cursor otherwise
-"      let &t_EI = "\<Esc>]12;blue\x7"
-"      silent !echo -ne "\033]12;blue\007"
-"      " reset cursor when vim exits
-"      "autocmd VimLeave * silent !echo -ne "\033]112\007"
-"      autocmd VimLeave * silent !echo -ne "\003]12;gray\007"
-"endif
-"if has("autocmd")
-"  au InsertEnter * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_BLOCK/TERMINAL_CURSOR_SHAPE_UNDERLINE/' ~/.config/Terminal/terminalrc"                                                                                          
-"  au InsertLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/Terminal/terminalrc"                                                                                          
-"  au VimLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/Terminal/terminalrc"  
-"endif
-
-" cursor
-"au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-"au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-"au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-"au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 "
 " don't outdent hashes
 inoremap # #
@@ -400,6 +322,15 @@ set undolevels=700
 "endif
 
 " mjirik added
+" <c-h> left in insert mode
+" <c-l> right in insert mode
+inoremap <C-h> <left>
+inoremap <C-j> <right>
+
+" smash escape
+inoremap jk <esc>
+inoremap kj <esc>
+
 set pastetoggle=<F2>
 set clipboard=unnamed
 
@@ -407,6 +338,10 @@ set clipboard=unnamed
 noremap <leader>s :update<CR>
 vnoremap <leader>s <C-C>:update<CR>
 inoremap <leader>s <C-O>:update<CR>
+
+" Unite
+nnoremap <space>s :Unite -quick-match buffer<cr>
+nnoremap <space>/ :Unite grep:.<cr>
 
 " Quit command mjirik
 noremap <leader>q :quit<CR>
@@ -427,23 +362,6 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 " Select the item in the list with enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-"" ==========================================================
-"" Javascript
-"" ==========================================================
-"au BufRead *.js set makeprg=jslint\ %
-"
-"" Use tab to scroll through autocomplete menus
-""autocmd VimEnter * imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
-""autocmd VimEnter * imap <expr> <S-Tab> pumvisible() ? "<C-P>" : "<S-Tab>"
-"
-"let g:acp_completeoptPreview=1
-"
-"" ===========================================================
-"" FileType specific changes
-"" ============================================================
-"" Mako/HTML
-"autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
-"autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 "
 " ==========================================
 " Python IDE Setup
@@ -459,7 +377,7 @@ set laststatus=2
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
-map <leader>gh :Git push<CR>
+map <leader>gp :Git push<CR>
 map <leader>gl :Git pull<CR>
 
 
@@ -472,13 +390,6 @@ let g:ctrlp_max_height = 30
 "" set wildignore+=*_build/*
 "" set wildignore+=*/coverage/*
 
-" Settings for jedi-vim
-" cd ~/.vim/bundle
-" git clone git://github.com/davidhalter/jedi-vim.git
-"let g:jedi#related_names_command = "<leader>z"
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#popup_select_first = 0
-"map <Leader>b Oimport ipdb; ipdb.set_trace()  # BREAKPOINT<C-c>
 
 
 " Settings for python-mode
@@ -501,39 +412,6 @@ set nrformats-=octal
 " Taglist setup
 "
 autocmd BufWritePost *.py :TlistUpdate
-
-
-"" Python
-""au BufRead *.py compiler nose
-"au FileType python set omnifunc=pythoncomplete#Complete
-"au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-"au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-"au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-"" Don't let pyflakes use the quickfix window
-"let g:pyflakes_use_quickfix = 0
-"
-"
-"
-"" Add the virtualenv's site-packages to vim path
-"if has('python')
-"py << EOF
-"import os.path
-"import sys
-"import vim
-"if 'VIRTUAL_ENV' in os.environ:
-"    project_base_dir = os.environ['VIRTUAL_ENV']
-"    sys.path.insert(0, project_base_dir)
-"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"    execfile(activate_this, dict(__file__=activate_this))
-"EOF
-"
-"endif
-"
-"" Load up virtualenv's vimrc if it exists
-"if filereadable($VIRTUAL_ENV . '/.vimrc')
-"    source $VIRTUAL_ENV/.vimrc
-"endif
-"
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
