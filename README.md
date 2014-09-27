@@ -12,13 +12,6 @@ Install
 
 With first run of vim all plugins are installed automatically.
 
-    vim
-
-Build vimproc library
-
-    cd ~/.vim/bundle/vimproc.vim
-    make
-
 
 Mappings
 ===

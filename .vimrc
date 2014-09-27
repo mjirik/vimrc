@@ -170,7 +170,12 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/vimproc.vim', { 'build': {
+      \   'windows': 'make -f make_mingw32.mak',
+      \   'cygwin': 'make -f make_cygwin.mak',
+      \   'mac': 'make -f make_mac.mak',
+      \   'unix': 'make -f make_unix.mak',
+      \ } }
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
