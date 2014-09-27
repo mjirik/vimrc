@@ -38,7 +38,7 @@ Plugins
 ====
 
 
-[unite.vim][https://github.com/Shougo/unite.vim]
+[unite.vim](https://github.com/Shougo/unite.vim)
 ---
 * `<space>s` Unite -quick-match buffer
 * `<space>/` Unite grep
@@ -55,14 +55,14 @@ Interface with git from vim
 * `<leader>gp` git push
 
 
-[EasyMotion][https://github.com/Lokaltog/vim-easymotion]
+[EasyMotion](https://github.com/Lokaltog/vim-easymotion)
 ---
 
 Vim motion on speed
 
 * `<leader><leader>s` go to letter with EasyMotion
 
-[CtrlP][https://github.com/kien/ctrlp]
+[CtrlP](https://github.com/kien/ctrlp)
 ---
 
 Full path fuzzy finder
@@ -89,10 +89,10 @@ List of functions
 Other Plugins
 ---
 
-*[vim-startify][https://github.com/mhinz/vim-startify]
+* [vim-startify](https://github.com/mhinz/vim-startify)
 * NeoBundle plugin manager for vim. Use `:NeoBundleUpdate` for update your
   plugin list. Alternative to pathogen or vundle.
-* [Python-mode][http://github.com/klen/python-mode]
+* [Python-mode](http://github.com/klen/python-mode)
      Rope and so on
 * Pytest - 
      Runs your Python tests in Vim.
@@ -106,13 +106,10 @@ Other Plugins
     Syntax highlighting for git config files
 * Pydoc -
     Opens up pydoc within vim
-
 * Surround - 
     Allows you to surround text with open/close tags
-
 * Py.test - 
     Run py.test test's from within vim
-
 * MakeGreen -
     Generic test runner that works with nose
 
