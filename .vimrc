@@ -14,7 +14,14 @@
 " ==========================================================
 " Shortcuts
 " ==========================================================
+" <C-c>rr - refractoring
+" Press <F8> to run autopep8 on it
+
+
+
+
 set nocompatible              " Don't be compatible with vi
+
 let mapleader=","             " change the leader to be a comma vs slash
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
