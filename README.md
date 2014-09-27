@@ -12,6 +12,13 @@ Install
 
 With first run of vim all plugins are installed automatically.
 
+    vim
+
+Build vimproc library
+
+    cd ~/.vim/bundle/vimproc.vim
+    make
+
 
 Mappings
 ===
@@ -86,6 +93,17 @@ TagList
 List of functions
 * `<leader>t` turn on sidebar with functions
 
+
+TaskList
+---
+
+* `<leader>Td` to run TaskList
+
+autopep8
+---
+
+* `<F8>` to run automatic pep8 corecture
+
 Other Plugins
 ---
 
@@ -110,8 +128,10 @@ Other Plugins
     Allows you to surround text with open/close tags
 * Py.test - 
     Run py.test test's from within vim
-* MakeGreen -
+* MakeGreen
     Generic test runner that works with nose
+* [vimproc.vim](https://github.com/Shougo/vimproc.vim)
+    Interactive command execution in Vim - requested by unite
 
 
 Links

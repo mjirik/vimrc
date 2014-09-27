@@ -170,6 +170,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
