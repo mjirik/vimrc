@@ -97,6 +97,11 @@ autopep8
 
 * `<F8>` to run automatic pep8 corecture
 
+[tcomment_vim](https://github.com/tomtom/tcomment_vim)
+---
+
+* `<c-_><c-_>` Toggle comment
+
 Other Plugins
 ---
 
@@ -125,7 +130,12 @@ Other Plugins
     Generic test runner that works with nose
 * [vimproc.vim](https://github.com/Shougo/vimproc.vim)
     Interactive command execution in Vim - requested by unite
-
+* [vim-indent-guide](https://github.com/nathanaelkane/vim-indent-guides)
+    Plugin for visually displaying indent levels in code
+* [mhinz/vim-signify](https://github.com/mhinz/vim-signify)
+    Plugin make mark to line changed in repository
+* [Shougo/neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
+    Text completion
 
 Links
 ===

@@ -135,7 +135,7 @@ let iCanHazVundle=1
 "let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 let vundle_readme=expand('~/.vim/bundle/neobundle/README.md')
 if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
+    echo "Installing NeoBundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
     "silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
@@ -166,10 +166,16 @@ NeoBundle 'tell-k/vim-autopep8'
 NeoBundle 'vim-scripts/TaskList.vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
-"NeoBundle 'alfredodeza/pytest.vim'
+NeoBundle 'alfredodeza/pytest.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tomtom/tcomment_vim'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'gregsexton/gitv'
+" NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'windows': 'make -f make_mingw32.mak',
       \   'cygwin': 'make -f make_cygwin.mak',
@@ -352,6 +358,10 @@ noremap <leader>s :update<CR>
 vnoremap <leader>s <C-C>:update<CR>
 inoremap <leader>s <C-O>:update<CR>
 
+" Giv plugin
+nnoremap <silent> <leader>gv :Gitv<CR>
+nnoremap <silent> <leader>gV :Gitv!<CR>
+
 " Unite
 nnoremap <space>s :Unite -quick-match buffer<cr>
 nnoremap <space>/ :Unite grep:.<cr>
@@ -394,6 +404,21 @@ map <leader>gp :Git push<CR>
 map <leader>gl :Git pull<CR>
 
 
+" vim-ident-guides plugin - not wo
+"" hi IndentGuidesOdd  ctermbg=black
+"" hi IndentGuidesEven ctermbg=darkgrey
+" let g:indent_guides_start_level=1
+" let g:indent_guides_guide_size=1
+" let g:indent_guides_enable_on_vim_startup=0
+" let g:indent_guides_color_change_percent=3
+" if !has('gui_running')
+" let g:indent_guides_auto_colors=0
+" function! s:indent_set_console_colors()
+"     hi IndentGuidesOdd ctermbg=235
+"     hi IndentGuidesEven ctermbg=236
+" endfunction
+" autocmd VimEnter,Colorscheme * call s:indent_set_console_colors()
+" endif
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
@@ -404,6 +429,58 @@ let g:ctrlp_max_height = 30
 "" set wildignore+=*/coverage/*
 
 
+" Neocompletecash plugin
+" let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_temporary_dir=s:get_cache_dir('neocomplcache')
+" let g:neocomplcache_enable_fuzzy_completion=1
+
+
+
+" Neocomplete plugin setup
+"
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+" ----- end neocomplete plugin setup
 
 " Settings for python-mode
 " Note: I'm no longer using this. Leave this commented out
