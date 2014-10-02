@@ -496,7 +496,10 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
+" stop using long wait
+let g:pymode_rope_lookup_project = 0 
 
+set nofoldenable
 
 set nrformats-=octal
 " Taglist setup
@@ -505,5 +508,3 @@ autocmd BufWritePost *.py :TlistUpdate
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
-" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-set nofoldenable
