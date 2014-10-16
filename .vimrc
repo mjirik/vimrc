@@ -509,7 +509,7 @@ let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 " stop using long wait
-let g:pymode_rope_lookup_project = 0 
+let g:pymode_rope_lookup_project = 0
 
 "" Snippets
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -519,6 +519,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+""" Template plugin
+let g:template_dir="~/.vim/templates"
 
 set nofoldenable
 
