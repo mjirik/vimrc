@@ -146,7 +146,8 @@ endif
 "set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/bundle/neobundle/
 "call vundle#rc()
-call neobundle#rc(expand('~/.vim/bundle'))
+"call neobundle#rc(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 "Bundle 'gmarik/vundle'
 NeoBundle 'Shoguo/neobundle'
 NeoBundle 'tpope/vim-fugitive'
@@ -182,6 +183,7 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'mac': 'make -f make_mac.mak',
       \   'unix': 'make -f make_unix.mak',
       \ } }
+NeoBundle 'aperezdc/vim-template'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -196,6 +198,7 @@ if iCanHazVundle == 0
     :NeoBundleInstall
 endif
 
+call neobundle#end()
 "set rtp+=~/.vim/bundle/vundle/
 "call vundle#rc()
 "
