@@ -99,6 +99,8 @@ vnoremap > >gv " better identation
 
 " Open Tlist"
 map <leader>t :TlistOpen<CR>
+"   close tlist on select
+let Tlist_Close_On_Select = 1
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
