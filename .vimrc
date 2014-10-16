@@ -165,7 +165,8 @@ NeoBundle 'tomtom/tlib_vim'  " required by snipmate
 NeoBundle 'tell-k/vim-autopep8'
 "NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/TaskList.vim'
-NeoBundle 'garbas/vim-snipmate'
+" NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'alfredodeza/pytest.vim'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -507,6 +508,15 @@ let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 " stop using long wait
 let g:pymode_rope_lookup_project = 0 
+
+"" Snippets
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 set nofoldenable
 
