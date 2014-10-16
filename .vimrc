@@ -184,6 +184,7 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'unix': 'make -f make_unix.mak',
       \ } }
 NeoBundle 'aperezdc/vim-template'
+NeoBundle 'vim-scripts/ctrlp-funky'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -399,6 +400,11 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " git clone git://github.com/Lokaltog/vim-powerline.git
 set laststatus=2
 
+" Funky CtrlP
+let g:ctrlp_extensions = ['funky']
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>

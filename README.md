@@ -72,6 +72,11 @@ Full path fuzzy finder
     cd ~/.vim/bundle
     git clone https://github.com/kien/ctrlp.vim.git
 
+[CtrlPFunky](https://github.com/vim-scripts/ctrlp-funky)
+
+* `<Leader>fu` search fuzzy in functions
+* `<Leader>fU` search fuzzy in functions starting with word under cursor
+
 GunDo
 ---
 
