@@ -25,6 +25,8 @@ Insert mode
 
 *  press `jk` or `jk` to go in normal mode
 
+*  `<C-v><tab>` make tabulator
+
 
 Normal mode
 ----
