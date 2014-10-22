@@ -9,8 +9,12 @@
 """
 
 """
+import unittest
+from nose.plugins.attrib import attr
+
 class TemplateTest(unittest.TestCase):
 
+    @attr('interactive')
     def test_%HERE%(self):
         pass
 
