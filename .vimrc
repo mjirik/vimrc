@@ -365,6 +365,15 @@ noremap <leader>s :update<CR>
 vnoremap <leader>s <C-C>:update<CR>
 inoremap <leader>s <C-O>:update<CR>
 
+" Quit command mjirik
+noremap <leader>q :quit<CR>
+noremap <leader>Q :qa!<CR>
+
+" write and quit
+noremap <leader>sc :update<CR>:close<CR>
+vnoremap <leader>sc <C-C>:update<CR><C-C>:close<CR>
+inoremap <leader>sc <C-O>:update<CR><C-O>:close<CR>
+
 " Giv plugin
 nnoremap <silent> <leader>gv :Gitv<CR>
 nnoremap <silent> <leader>gV :Gitv!<CR>
@@ -372,10 +381,6 @@ nnoremap <silent> <leader>gV :Gitv!<CR>
 " Unite
 nnoremap <space>s :Unite -quick-match buffer<cr>
 nnoremap <space>/ :Unite grep:.<cr>
-
-" Quit command mjirik
-noremap <leader>q :quit<CR>
-noremap <leader>Q :qa!<CR>
 
 " Paste from clipboard
 map <leader>p "+p
@@ -386,7 +391,7 @@ nnoremap <leader>q :q<CR>
 " hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
 
-" Remove trailing whitespace on <leader>S
+" Remove trailing whitecheck structurespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
