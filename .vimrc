@@ -370,9 +370,9 @@ noremap <leader>q :quit<CR>
 noremap <leader>Q :qa!<CR>
 
 " write and quit
-noremap <leader>sc :update<CR>:close<CR>
-vnoremap <leader>sc <C-C>:update<CR><C-C>:close<CR>
-inoremap <leader>sc <C-O>:update<CR><C-O>:close<CR>
+noremap <leader>sc :update<CR>:close<CR><CR>
+vnoremap <leader>sc <C-C>:update<CR><C-C>:close<CR><CR>
+inoremap <leader>sc <C-O>:update<CR><C-O>:close<CR><CR>
 
 " Giv plugin
 nnoremap <silent> <leader>gv :Gitv<CR>
@@ -417,7 +417,7 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
-map <leader>gp :Git push<CR>
+map <leader>gp :Git push<CR><CR>
 map <leader>gl :Git pull<CR>
 
 
