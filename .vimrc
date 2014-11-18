@@ -156,7 +156,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'klen/python-mode'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/wombat256.vim'
@@ -164,7 +163,6 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
 NeoBundle 'tomtom/tlib_vim'  " required by snipmate
 "NeoBundle 'pypi/rope'
-NeoBundle 'tell-k/vim-autopep8'
 "NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/TaskList.vim'
 " NeoBundle 'garbas/vim-snipmate'
@@ -188,8 +186,12 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \ } }
 NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/ctrlp-funky'
+NeoBundleLazy 'tell-k/vim-autopep8'
+NeoBundleLazy 'klen/python-mode'
 NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
+autocmd FileType, py NeoBundleSource vim-autopep8
+autocmd FileType, py NeoBundleSource python-mode
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
