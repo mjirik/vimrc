@@ -175,6 +175,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tomtom/tcomment_vim'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mhinz/vim-signify'
+NeoBundle 'bling/vim-airline'
+" NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'gregsexton/gitv'
 " NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neocomplete.vim'
@@ -186,7 +188,6 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \ } }
 NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/ctrlp-funky'
-NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundleLazy 'tell-k/vim-autopep8', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
@@ -354,6 +355,28 @@ set undolevels=700
 "else
 "    colorscheme torte
 "endif
+
+" Airline status-line should look better with fallowing lines
+" set encoding=utf-8
+" let g:airline_powerline_fonts = 1
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.linenr = '␊'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
+" end of Airline configuration
 
 " mjirik added
 " <c-h> left in insert mode
