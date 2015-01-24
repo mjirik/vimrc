@@ -186,6 +186,7 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \ } }
 NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/ctrlp-funky'
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundleLazy 'tell-k/vim-autopep8', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
@@ -198,7 +199,6 @@ NeoBundleLazy 'gerw/vim-latex-suite'
 autocmd FileType, tex NeoBundleSource vim-latex-suite
 " autocmd FileType, py NeoBundleSource vim-autopep8
 " autocmd FileType, py NeoBundleSource python-mode
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Add your bundles here
 "Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 "Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
