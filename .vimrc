@@ -359,6 +359,7 @@ set undolevels=700
 " Airline status-line should look better with fallowing lines
 " set encoding=utf-8
 " let g:airline_powerline_fonts = 1
+  set laststatus=2
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
@@ -434,10 +435,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " ============================================
 "
 
-" Settings for vim-powerline
-" cd ~/.vim/bundle
-" git clone git://github.com/Lokaltog/vim-powerline.git
-set laststatus=2
 
 " Funky CtrlP
 let g:ctrlp_extensions = ['funky']
@@ -450,6 +447,8 @@ map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
 map <leader>gp :Git push<CR><CR>
 map <leader>gl :Git pull<CR>
+map <leader>gv :Gitv<CR>
+map <leader>gb :Gblame<CR>
 
 
 " vim-ident-guides plugin - not wo
