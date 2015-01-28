@@ -176,18 +176,18 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tomtom/tcomment_vim'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mhinz/vim-signify'
-NeoBundle 'bling/vim-airline'
-" NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'gregsexton/gitv'
 " NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'aperezdc/vim-template'
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'windows': 'make -f make_mingw32.mak',
       \   'cygwin': 'make -f make_cygwin.mak',
       \   'mac': 'make -f make_mac.mak',
       \   'unix': 'make -f make_unix.mak',
       \ } }
-NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/ctrlp-funky'
 NeoBundleLazy 'tell-k/vim-autopep8', {
     \ 'autoload' : { 'filetypes' : ['python'] }
@@ -360,23 +360,23 @@ set undolevels=700
 " set encoding=utf-8
 " let g:airline_powerline_fonts = 1
   set laststatus=2
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
-
-  " unicode symbols
-  let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
-  let g:airline_right_sep = '«'
-  let g:airline_right_sep = '◀'
-  let g:airline_symbols.linenr = '␊'
-  let g:airline_symbols.linenr = '␤'
-  let g:airline_symbols.linenr = '¶'
-  let g:airline_symbols.branch = '⎇'
-  let g:airline_symbols.paste = 'ρ'
-  let g:airline_symbols.paste = 'Þ'
-  let g:airline_symbols.paste = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
+  " if !exists('g:airline_symbols')
+  "   let g:airline_symbols = {}
+  " endif
+  "
+  " " unicode symbols
+  " let g:airline_left_sep = '»'
+  " let g:airline_left_sep = '▶'
+  " let g:airline_right_sep = '«'
+  " let g:airline_right_sep = '◀'
+  " let g:airline_symbols.linenr = '␊'
+  " let g:airline_symbols.linenr = '␤'
+  " let g:airline_symbols.linenr = '¶'
+  " let g:airline_symbols.branch = '⎇'
+  " let g:airline_symbols.paste = 'ρ'
+  " let g:airline_symbols.paste = 'Þ'
+  " let g:airline_symbols.paste = '∥'
+  " let g:airline_symbols.whitespace = 'Ξ'
 " end of Airline configuration
 
 " mjirik added
