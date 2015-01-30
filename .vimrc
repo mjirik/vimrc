@@ -411,6 +411,7 @@ nnoremap <silent> <leader>gV :Gitv!<CR>
 " Unite
 nnoremap <space>s :Unite -quick-match buffer -auto-preview<cr>
 nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <space>; :Unite -start-insert line<cr>
 
 " Paste from clipboard
 map <leader>p "+p
