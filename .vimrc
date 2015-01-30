@@ -151,6 +151,15 @@ set rtp+=~/.vim/bundle/neobundle/
 "call neobundle#rc(expand('~/.vim/bundle'))
 call neobundle#begin(expand('~/.vim/bundle'))
 "Bundle 'gmarik/vundle'
+" NeoBundle 'garbas/vim-snipmate'
+" NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'pypi/rope'
+"NeoBundle 'aperezdc/vim-template'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
+" NeoBundle 'bling/vim-airline'
+" NeoBundle 'Shougo/neocomplcache.vim'
+" end of unused modules
+
 NeoBundle 'Shoguo/neobundle'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -159,27 +168,20 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/wombat256.vim'
-" NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
 NeoBundle 'tomtom/tlib_vim'  " required by snipmate
-"NeoBundle 'pypi/rope'
-"NeoBundle 'aperezdc/vim-template'
 NeoBundle 'vim-scripts/TaskList.vim'
-" NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'alfredodeza/pytest.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
 NeoBundle 'tomtom/tcomment_vim'
-" NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mhinz/vim-signify'
-" NeoBundle 'bling/vim-airline'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'gregsexton/gitv'
-" NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'aperezdc/vim-template'
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
@@ -188,23 +190,19 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'mac': 'make -f make_mac.mak',
       \   'unix': 'make -f make_unix.mak',
       \ } }
-NeoBundle 'vim-scripts/ctrlp-funky'
-NeoBundleLazy 'tell-k/vim-autopep8', {
-    \ 'autoload' : { 'filetypes' : ['python'] }
-    \ }
-"    \ 'load_ftdetect' : 1,
-NeoBundleLazy 'klen/python-mode', {
-    \ 'autoload' : { 'filetypes' : ['python'] }
-    \ }
+" NeoBundle 'vim-scripts/ctrlp-funky'
+" NeoBundleLazy 'tell-k/vim-autopep8', {
+"     \ 'autoload' : { 'filetypes' : ['python'] }
+"     \ }
+" "    \ 'load_ftdetect' : 1,
+" NeoBundleLazy 'klen/python-mode', {
+"     \ 'autoload' : { 'filetypes' : ['python'] }
+"     \ }
+"
+" NeoBundleLazy 'gerw/vim-latex-suite'
 
-NeoBundleLazy 'gerw/vim-latex-suite'
+
 autocmd FileType, tex NeoBundleSource vim-latex-suite
-" autocmd FileType, py NeoBundleSource vim-autopep8
-" autocmd FileType, py NeoBundleSource python-mode
-"Add your bundles here
-"Bundle 'Syntastic' "uber awesome syntax and errors highlighter
-"Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
-"Bundle 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal
 "...All your other bundles...
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
@@ -411,7 +409,7 @@ nnoremap <silent> <leader>gv :Gitv<CR>
 nnoremap <silent> <leader>gV :Gitv!<CR>
 
 " Unite
-nnoremap <space>s :Unite -quick-match buffer<cr>
+nnoremap <space>s :Unite -quick-match buffer -auto-preview<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 
 " Paste from clipboard
