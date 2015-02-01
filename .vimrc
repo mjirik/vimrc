@@ -190,16 +190,16 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'mac': 'make -f make_mac.mak',
       \   'unix': 'make -f make_unix.mak',
       \ } }
-" NeoBundle 'vim-scripts/ctrlp-funky'
-" NeoBundleLazy 'tell-k/vim-autopep8', {
-"     \ 'autoload' : { 'filetypes' : ['python'] }
-"     \ }
-" "    \ 'load_ftdetect' : 1,
-" NeoBundleLazy 'klen/python-mode', {
-"     \ 'autoload' : { 'filetypes' : ['python'] }
-"     \ }
-"
-" NeoBundleLazy 'gerw/vim-latex-suite'
+NeoBundle 'vim-scripts/ctrlp-funky'
+NeoBundleLazy 'tell-k/vim-autopep8', {
+    \ 'autoload' : { 'filetypes' : ['python'] }
+    \ }
+   " \ 'load_ftdetect' : 1,
+NeoBundleLazy 'klen/python-mode', {
+    \ 'autoload' : { 'filetypes' : ['python'] }
+    \ }
+
+NeoBundleLazy 'gerw/vim-latex-suite'
 
 
 autocmd FileType, tex NeoBundleSource vim-latex-suite
