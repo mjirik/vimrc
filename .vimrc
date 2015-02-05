@@ -19,6 +19,11 @@
 
 
 
+" slovnik spell check
+" http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/Czech/spell_checking/cs_CZ.zip
+" navod
+" http://www.root.cz/clanky/vim-sedm-prvni-cast/#k02
+" http://henry.precheur.org/vim/create_spell_file_for_vim
 
 set nocompatible              " Don't be compatible with vi
 
@@ -183,7 +188,7 @@ NeoBundle 'mhinz/vim-signify'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'aperezdc/vim-template'
+NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'windows': 'make -f make_mingw32.mak',
       \   'cygwin': 'make -f make_cygwin.mak',
@@ -409,6 +414,7 @@ nnoremap <silent> <leader>gv :Gitv<CR>
 nnoremap <silent> <leader>gV :Gitv!<CR>
 
 " Unite
+let g:unite_source_grep_default_opts = '-iIHn'
 nnoremap <space>s :Unite -quick-match buffer -auto-preview<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>; :Unite -start-insert line<cr>
@@ -544,6 +550,9 @@ let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 " stop using long wait
 let g:pymode_rope_lookup_project = 0
+" stop use rope for completion
+let g:pymode_rope_completion = 0
+"
 
 "" Snippets
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
