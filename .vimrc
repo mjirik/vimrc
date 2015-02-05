@@ -19,12 +19,6 @@
 
 
 
-" slovnik spell check
-" http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/Czech/spell_checking/cs_CZ.zip
-" navod
-" http://www.root.cz/clanky/vim-sedm-prvni-cast/#k02
-" http://henry.precheur.org/vim/create_spell_file_for_vim
-
 set nocompatible              " Don't be compatible with vi
 
 let mapleader=","             " change the leader to be a comma vs slash
@@ -433,6 +427,15 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" slovnik spell check
+" http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/Czech/spell_checking/cs_CZ.zip
+" navod
+" http://www.root.cz/clanky/vim-sedm-prvni-cast/#k02
+" http://henry.precheur.org/vim/create_spell_file_for_vim
+let g:tex_comment_nospell=1
+" use 
+" % vim: spell spelllang=en_gb
 
 "
 " ==========================================
