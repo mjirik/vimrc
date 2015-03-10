@@ -57,15 +57,24 @@ map <Leader>Td <Plug>TaskList
 " it is actualy python mode automatically
 
 " run py.test's
-nmap <silent><Leader>Tf <Esc>:Pytest file<CR>
-nmap <silent><Leader>Tc <Esc>:Pytest class<CR>
-nmap <silent><Leader>Tm <Esc>:Pytest method<CR>
-nmap <silent><Leader>Tn <Esc>:Pytest next<CR>
-nmap <silent><Leader>Tp <Esc>:Pytest previous<CR>
-nmap <silent><Leader>Te <Esc>:Pytest error<CR>
+" nmap <silent><Leader>Tf <Esc>:Pytest file<CR>
+" nmap <silent><Leader>Tc <Esc>:Pytest class<CR>
+" nmap <silent><Leader>Tm <Esc>:Pytest method<CR>
+" nmap <silent><Leader>Tn <Esc>:Pytest next<CR>
+" nmap <silent><Leader>Tp <Esc>:Pytest previous<CR>
+" nmap <silent><Leader>Te <Esc>:Pytest error<CR>
 
 " Run django tests
-map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
+" map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
+nnoremap<Leader>da :DjangoTestApp<CR>
+nnoremap<Leader>df :DjangoTestFile<CR>
+nnoremap<Leader>dc :DjangoTestClass<CR>
+nnoremap<Leader>dm :DjangoTestMethod<CR>
+nnoremap<Leader>nf :NosetestFile<CR>
+nnoremap<Leader>nc :NosetestClass<CR>
+nnoremap<Leader>nm :NosetestMethod<CR>
+nnoremap<Leader>nb :NosetestBaseMethod<CR>
+nnoremap<Leader>rr :RerunLastTests<CR>
 
 " Reload Vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -197,6 +206,10 @@ NeoBundleLazy 'tell-k/vim-autopep8', {
 NeoBundleLazy 'klen/python-mode', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
+NeoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
+    \ 'autoload' : { 'filetypes' : ['python'] }
+    \ }
+
 
 NeoBundleLazy 'gerw/vim-latex-suite'
 
