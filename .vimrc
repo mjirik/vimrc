@@ -169,15 +169,23 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " end of unused modules
 
 NeoBundle 'Shoguo/neobundle'
-NeoBundle 'klen/rainbow_parentheses.vim'
+
+" Colormaps
+NeoBundle 'vim-scripts/wombat256.vim'
+NeoBundle 'vim-scripts/summerfruit256.vim'
+" NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'vim-scripts/pyte'
+" NeoBundle 'jonathanfilip/vim-lucius'
+" NeoBundle 'klen/rainbow_parentheses.vim'
+
+NeoBundle 'luochen1990/rainbow'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'vim-scripts/wombat256.vim'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
 NeoBundle 'tomtom/tlib_vim'  " required by snipmate
 NeoBundle 'vim-scripts/TaskList.vim'
@@ -189,10 +197,10 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'mhinz/vim-signify'
-" NeoBundle 'louchen1999/rainbow'
 NeoBundle 'kshenoy/vim-signature'
 NeoBundle 'vim-scripts/SearchComplete'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
@@ -344,8 +352,11 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color scheme
 " wombat color scheme
+" let g:solarized_termcolors=256  " this is for solarized color scheme
 set t_Co=256
 color wombat256mod
+" color summerfruit256
+" color lucius
 
 " Length line
 set tw=79   " width of document (used by gd)
