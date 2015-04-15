@@ -103,7 +103,7 @@ vnoremap < <gv " better identation
 vnoremap > >gv " better identation
 
 " Open NerdTree
-" map <leader>t :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 " Open Tlist"
 map <leader>t :TlistOpen<CR>
