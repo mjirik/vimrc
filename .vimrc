@@ -97,6 +97,9 @@ map <leader>l <esc>:tabnext<CR>
 map <leader>n <esc>:bn<CR>
 map <leader>m <esc>:bn<CR>
 
+map <leader>q <esc>:lprevious<CR>
+map <leader>w <esc>:lnext<CR>
+map <leader>m <esc>:lNext<CR>
 
 " easier moving of code blocks
 vnoremap < <gv " better identation
@@ -215,7 +218,10 @@ NeoBundleLazy 'tell-k/vim-autopep8', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
    " \ 'load_ftdetect' : 1,
-NeoBundleLazy 'klen/python-mode', {
+" NeoBundleLazy 'klen/python-mode', {
+"     \ 'autoload' : { 'filetypes' : ['python'] }
+"     \ }
+NeoBundleLazy 'scrooloose/syntastic', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
 NeoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
@@ -405,6 +411,20 @@ set undolevels=700
 " end of Airline configuration
 
 " mjirik added
+"
+" Nahrada za python-mode
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = { "type": "style" }
+"
+" Konec nahrada za python-mod
+"
 " <c-h> left in insert mode
 " <c-l> right in insert mode
 inoremap <C-h> <left>

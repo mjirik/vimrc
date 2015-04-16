@@ -1,7 +1,12 @@
 #!
 
 # Ubuntu
-sudo apt-get install curl
+sudo apt-get install curl 
+# complex checker
+sudo apt-get install pylint
+
+# simple checker
+# sudo apt-get install python-flake8
 
 
 #mac os
@@ -19,6 +24,7 @@ mv -f ~/.vim ~/.vim.bck
 git clone git@github.com:mjirik/vimrc.git ~/.vim
 
 ln -s ~/.vim/.vimrc ~/
+ln -s ~/.vim/.pylintrc ~/
 
 #mv -f ~/.vim/ftplugin ~/.vim/ftplugin.bck
 #
