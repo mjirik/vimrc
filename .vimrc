@@ -508,7 +508,7 @@ map <leader>gl :Git pull<CR>
 map <leader>gv :Gitv<CR>
 map <leader>gb :Gblame<CR>
 
-
+map <leader>pp :!python setup.py register sdist upload<cr>
 " vim-ident-guides plugin - not wo
 "" hi IndentGuidesOdd  ctermbg=black
 "" hi IndentGuidesEven ctermbg=darkgrey
