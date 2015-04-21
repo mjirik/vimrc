@@ -81,6 +81,10 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 " NeoBundle 'bling/vim-airline'
 " NeoBundle 'Shougo/neocomplcache.vim'
+" NeoBundle 'scrooloose/nerdcommenter'
+" NeoBundle 'Valloric/YouCompleteMe'
+" replaced by
+" NeoBundle 'Shougo/neocomplete.vim'
 " end of unused modules
 
 NeoBundle 'Shoguo/neobundle'
@@ -92,7 +96,7 @@ NeoBundle 'vim-scripts/summerfruit256.vim'
 " NeoBundle 'vim-scripts/pyte'
 " NeoBundle 'jonathanfilip/vim-lucius'
 " NeoBundle 'klen/rainbow_parentheses.vim'
-
+"
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'voithos/vim-python-matchit'
 NeoBundle 'tpope/vim-surround'
@@ -108,7 +112,6 @@ NeoBundle 'vim-scripts/TaskList.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'alfredodeza/pytest.vim'
-" NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
 NeoBundle 'tomtom/tcomment_vim'
@@ -119,9 +122,6 @@ NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'davidhalter/jedi-vim'
-" NeoBundle 'Valloric/YouCompleteMe'
-" replaced by
-" NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'windows': 'make -f make_mingw32.mak',
@@ -129,20 +129,20 @@ NeoBundle 'Shougo/vimproc.vim', { 'build': {
       \   'mac': 'make -f make_mac.mak',
       \   'unix': 'make -f make_unix.mak',
       \ } }
-NeoBundle 'vim-scripts/ctrlp-funky'
+" NeoBundle 'vim-scripts/ctrlp-funky'
 NeoBundleLazy 'tell-k/vim-autopep8', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
    " \ 'load_ftdetect' : 1,
-" NeoBundleLazy 'klen/python-mode', {
-"     \ 'autoload' : { 'filetypes' : ['python'] }
-"     \ }
-NeoBundleLazy 'scrooloose/syntastic', {
-    \ 'autoload' : { 'filetypes' : ['python'] }
-    \ }
 NeoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
     \ 'autoload' : { 'filetypes' : ['python'] }
     \ }
+" " NeoBundleLazy 'klen/python-mode', {
+" "     \ 'autoload' : { 'filetypes' : ['python'] }
+" "     \ }
+" NeoBundleLazy 'scrooloose/syntastic', {
+"     \ 'autoload' : { 'filetypes' : ['python'] }
+"     \ }
 
 
 NeoBundleLazy 'gerw/vim-latex-suite'
