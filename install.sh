@@ -13,6 +13,8 @@ sudo apt-get install pylint
 sudo port install py-pep8
 
 
+pip install --user jedi
+
 # -------
 
 echo "delete old .vimrc  `pwd`"

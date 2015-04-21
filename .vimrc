@@ -40,94 +40,6 @@ nmap <leader>sb :call SplitScroll()<CR>
 
 "<CR><C-w>l<C-f>:set scrollbind<CR>
 
-" chage window with Ctrl-j
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-" sudo write this
-cmap W! w !sudo tee % >/dev/null
-
-" Toggle the tasklist
-map <Leader>Td <Plug>TaskList
-
-" Run pep8
-" let g:pep8_map='<leader>8'
-" it is actualy python mode automatically
-
-" run py.test's
-" nmap <silent><Leader>Tf <Esc>:Pytest file<CR>
-" nmap <silent><Leader>Tc <Esc>:Pytest class<CR>
-" nmap <silent><Leader>Tm <Esc>:Pytest method<CR>
-" nmap <silent><Leader>Tn <Esc>:Pytest next<CR>
-" nmap <silent><Leader>Tp <Esc>:Pytest previous<CR>
-" nmap <silent><Leader>Te <Esc>:Pytest error<CR>
-
-" Run django tests
-" map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
-nnoremap<Leader>da :DjangoTestApp<CR>
-nnoremap<Leader>df :DjangoTestFile<CR>
-nnoremap<Leader>dc :DjangoTestClass<CR>
-nnoremap<Leader>dm :DjangoTestMethod<CR>
-nnoremap<Leader>nf :NosetestFile<CR>
-nnoremap<Leader>nc :NosetestClass<CR>
-nnoremap<Leader>nm :NosetestMethod<CR>
-nnoremap<Leader>nb :NosetestBaseMethod<CR>
-nnoremap<Leader>rr :RerunLastTests<CR>
-
-" Reload Vimrc
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" open/close the quickfix window
-nmap <leader>c :copen<CR>
-nmap <leader>cc :cclose<CR>
-
-" for when we forget to use sudo to open/edit a file
-cmap w!! w !sudo tee % >/dev/null
-
-
-" and lets make these all work in insert mode too ( <C-O> makes next cmd
-"  happen as if in command mode )
-imap <C-W> <C-O><C-W>
-" navigating tabs
-map <leader>h <esc>:tabprevious<CR>
-map <leader>l <esc>:tabnext<CR>
-
-map <leader>n <esc>:bn<CR>
-map <leader>m <esc>:bn<CR>
-
-map <leader>q <esc>:lprevious<CR>
-map <leader>w <esc>:lnext<CR>
-map <leader>m <esc>:lNext<CR>
-
-" easier moving of code blocks
-vnoremap < <gv " better identation
-vnoremap > >gv " better identation
-
-" Open NerdTree
-map <leader>e :NERDTreeToggle<CR>
-
-" Open Tlist"
-map <leader>t :TlistOpen<CR>
-"   close tlist on select
-let Tlist_Close_On_Select = 1
-
-" Run command-t file search
-map <leader>f :CommandT<CR>
-" Ack searching
-nmap <leader>a <Esc>:Ack!
-
-" Load the Gundo window
-map <leader>u :GundoToggle<CR>
-
-" Jump to the definition of whatever the cursor is on
-" map <leader>j :RopeGotoDefinition<CR>
-" it is actualy python mode with <C-c>g
-
-" Rename whatever the cursor is on (including references to it)
-" map <leader>r :RopeRename<CR>
-" it is actualy python mode with <C-c>rr
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -205,6 +117,7 @@ NeoBundle 'vim-scripts/SearchComplete'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
@@ -491,6 +404,97 @@ let g:tex_comment_nospell=1
 " ============================================
 "
 
+" chage window with Ctrl-j
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" sudo write this
+cmap W! w !sudo tee % >/dev/null
+
+" Toggle the tasklist
+map <Leader>Td <Plug>TaskList
+
+" Run pep8
+" let g:pep8_map='<leader>8'
+" it is actualy python mode automatically
+
+" run py.test's
+" nmap <silent><Leader>Tf <Esc>:Pytest file<CR>
+" nmap <silent><Leader>Tc <Esc>:Pytest class<CR>
+" nmap <silent><Leader>Tm <Esc>:Pytest method<CR>
+" nmap <silent><Leader>Tn <Esc>:Pytest next<CR>
+" nmap <silent><Leader>Tp <Esc>:Pytest previous<CR>
+" nmap <silent><Leader>Te <Esc>:Pytest error<CR>
+
+" Run django tests
+" map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
+nnoremap<Leader>da :DjangoTestApp<CR>
+nnoremap<Leader>df :DjangoTestFile<CR>
+nnoremap<Leader>dc :DjangoTestClass<CR>
+nnoremap<Leader>dm :DjangoTestMethod<CR>
+nnoremap<Leader>nf :NosetestFile<CR>
+nnoremap<Leader>nc :NosetestClass<CR>
+nnoremap<Leader>nm :NosetestMethod<CR>
+nnoremap<Leader>nb :NosetestBaseMethod<CR>
+nnoremap<Leader>rr :RerunLastTests<CR>
+
+" Reload Vimrc
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" open/close the quickfix window
+nmap <leader>c :copen<CR>
+nmap <leader>cc :cclose<CR>
+
+" for when we forget to use sudo to open/edit a file
+cmap w!! w !sudo tee % >/dev/null
+
+
+" and lets make these all work in insert mode too ( <C-O> makes next cmd
+"  happen as if in command mode )
+imap <C-W> <C-O><C-W>
+" navigating tabs
+map <leader>h <esc>:tabprevious<CR>
+map <leader>l <esc>:tabnext<CR>
+
+" map <leader>n <esc>:bn<CR>
+" map <leader>m <esc>:bn<CR>
+
+
+" Next error
+map <leader>w <esc>:lprevious<CR>
+map <leader>e <esc>:lnext<CR>
+map <leader>m <esc>:lNext<CR>
+
+" easier moving of code blocks
+vnoremap < <gv " better identation
+vnoremap > >gv " better identation
+
+" Open NerdTree
+map <Space>e :NERDTreeToggle<CR>
+
+" Open Tlist"
+" map <leader>t :TlistOpen<CR>
+map <Space>t :TlistOpen<CR>
+"   close tlist on select
+let Tlist_Close_On_Select = 1
+
+" Run command-t file search
+map <leader>f :CommandT<CR>
+" Ack searching
+nmap <leader>a <Esc>:Ack!
+
+" Load the Gundo window
+map <leader>u :GundoToggle<CR>
+
+" Jump to the definition of whatever the cursor is on
+" map <leader>j :RopeGotoDefinition<CR>
+" it is actualy python mode with <C-c>g
+
+" Rename whatever the cursor is on (including references to it)
+" map <leader>r :RopeRename<CR>
+" it is actualy python mode with <C-c>rr
 " Rainbow setup ()
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
@@ -525,6 +529,18 @@ map <leader>pp :!python setup.py register sdist upload<cr>
 " endfunction
 " autocmd VimEnter,Colorscheme * call s:indent_set_console_colors()
 " endif
+
+" Jedi
+" this is default setting
+" let g:jedi#goto_assignments_command = "<leader>g"
+" let g:jedi#goto_definitions_command = "<leader>d"
+" let g:jedi#documentation_command = "K"
+" let g:jedi#usages_command = "<leader>n"
+" let g:jedi#completions_command = "<C-Space>"
+" let g:jedi#rename_command = "<leader>r"
+let g:jedi#goto_assignments_command = "<leader>gg"
+let g:jedi#usages_command = "<leader>nn"
+
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
@@ -593,20 +609,19 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"map <Leader>j :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
-" stop using long wait
-let g:pymode_rope_lookup_project = 0
-" stop use rope for completion
-let g:pymode_rope_completion = 0
+" let ropevim_enable_shortcuts = 1
+" let g:pymode_rope_goto_def_newwin = "vnew"
+" let g:pymode_rope_extended_complete = 1
+" let g:pymode_breakpoint = 0
+" let g:pymode_syntax = 1
+" let g:pymode_syntax_builtin_objs = 0
+" let g:pymode_syntax_builtin_funcs = 0
+" " stop using long wait
+" let g:pymode_rope_lookup_project = 0
+" " stop use rope for completion
+" let g:pymode_rope_completion = 0
 "
+map <Leader>b Oimport ipdb; ipdb.set_trace() #  noqa BREAKPOINT<C-c>
 
 "" Snippets
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
