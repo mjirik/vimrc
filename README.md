@@ -5,10 +5,9 @@ vimrc
 Install
 =======
 
-    sudo apt-get instal silversearcher-ag python-autopep8
-
-    git clone git@github.com:mjirik/vimrc.git ~/.vim
-    ln -s ~/.vim/.vimrc ~/
+    wget https://raw.githubusercontent.com/mjirik/vimrc/master/install.sh
+    source install.sh
+    
 
 With first run of vim all plugins are installed automatically.
 
