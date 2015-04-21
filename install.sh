@@ -5,8 +5,11 @@ sudo apt-get install curl
 # complex checker
 sudo apt-get install pylint
 
+
 # simple checker
 # sudo apt-get install python-flake8
+
+sudo apt-get instal silversearcher-ag python-autopep8
 
 
 #mac os
