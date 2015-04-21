@@ -1,6 +1,6 @@
 "==========================================================
 " Dependencies - Libraries/Applications outside of vim
-" ==========================================================
+" =========================================================
 " Pep8 - http://pypi.python.org/pypi/pep8
 " Pyflakes
 " Ack
@@ -94,6 +94,7 @@ NeoBundle 'vim-scripts/summerfruit256.vim'
 " NeoBundle 'klen/rainbow_parentheses.vim'
 
 NeoBundle 'luochen1990/rainbow'
+NeoBundle 'voithos/vim-python-matchit'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -118,6 +119,8 @@ NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'davidhalter/jedi-vim'
+" NeoBundle 'Valloric/YouCompleteMe'
+" replaced by
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
 NeoBundle 'Shougo/vimproc.vim', { 'build': {
@@ -551,12 +554,6 @@ let g:ctrlp_max_height = 30
 "" set wildignore+=*/coverage/*
 
 
-" Neocompletecash plugin
-" let g:neocomplcache_enable_at_startup = 1
-" let g:neocomplcache_temporary_dir=s:get_cache_dir('neocomplcache')
-" let g:neocomplcache_enable_fuzzy_completion=1
-
-
 
 " Neocomplete plugin setup
 "
@@ -635,8 +632,9 @@ let g:UltiSnipsEditSplit="vertical"
 """ Template plugin
 let g:template_dir="~/.vim/templates"
 
-set nofoldenable
+set showbreak=↪
 
+set nofoldenable
 set nrformats-=octal
 " Taglist setup
 "
