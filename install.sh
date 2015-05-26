@@ -34,7 +34,7 @@ git clone git@github.com:mjirik/vimrc.git ~/.vim
 ln -s ~/.vim/.vimrc ~/
 ln -s ~/.vim/.pylintrc ~/
 
-# run vim and install plugins
+echo "run vim and install plugins"
 vim 
 
 # build YCM
