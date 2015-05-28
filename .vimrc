@@ -380,6 +380,8 @@ nnoremap <space>; :Unite -start-insert line<cr>
 
 " Paste from clipboard
 map <leader>p "+p
+" Copy to clipboard
+map <leader>c "+y
 
 " Quit window on <leader>q
 nnoremap <leader>q :q<CR>
