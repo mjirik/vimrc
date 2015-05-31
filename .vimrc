@@ -116,6 +116,7 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'mhinz/vim-signify'
+"NeoBundle 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
 NeoBundle 'kshenoy/vim-signature'
 NeoBundle 'vim-scripts/SearchComplete'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -379,6 +380,8 @@ nnoremap <space>; :Unite -start-insert line<cr>
 
 " Paste from clipboard
 map <leader>p "+p
+" Copy to clipboard
+map <leader>c "+y
 
 " Quit window on <leader>q
 nnoremap <leader>q :q<CR>

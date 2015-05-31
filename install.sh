@@ -11,6 +11,9 @@ sudo apt-get install pylint
 
 sudo apt-get instal silversearcher-ag python-autopep8
 
+# YCM
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev
 
 #mac os
 sudo port install py-pep8
@@ -30,6 +33,16 @@ git clone git@github.com:mjirik/vimrc.git ~/.vim
 
 ln -s ~/.vim/.vimrc ~/
 ln -s ~/.vim/.pylintrc ~/
+
+echo "run vim and install plugins"
+vim 
+
+# build YCM
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh
+# ./install.sh --clang-completer
+
+
 
 #mv -f ~/.vim/ftplugin ~/.vim/ftplugin.bck
 #
