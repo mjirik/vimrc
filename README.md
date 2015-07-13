@@ -30,7 +30,6 @@ Insert mode
 Normal mode
 ----
 
-* `<C-c>rr` refractoring
 * `<C-c>g` go to function definition
 
 
@@ -38,6 +37,11 @@ Normal mode
 Plugins
 ====
 
+[jedi-vim]
+----
+
+Python 
+* `<leader>r` refractoring
 
 [unite.vim](https://github.com/Shougo/unite.vim)
 ---
@@ -62,6 +66,7 @@ Interface with git from vim
 Vim motion on speed
 
 * `<leader><leader>s` go to letter with EasyMotion
+* `<leader><leader>w` go to word with EasyMotion
 
 [CtrlP](https://github.com/kien/ctrlp)
 ---
@@ -114,8 +119,6 @@ Other Plugins
 * [vim-startify](https://github.com/mhinz/vim-startify)
 * NeoBundle plugin manager for vim. Use `:NeoBundleUpdate` for update your
   plugin list. Alternative to pathogen or vundle.
-* [Python-mode](http://github.com/klen/python-mode)
-     Rope and so on
 * Pytest - 
      Runs your Python tests in Vim.
 * Commant-T - 
@@ -142,6 +145,9 @@ Other Plugins
     Plugin make mark to line changed in repository
 * [Shougo/neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
     Text completion
+
+* [terryma/vim-expand-region] 
+     press v in visual mode to expand region , `<Ctrl>+v` goes back
 
 Links
 ===

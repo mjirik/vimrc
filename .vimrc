@@ -97,6 +97,7 @@ NeoBundle 'vim-scripts/summerfruit256.vim'
 " NeoBundle 'jonathanfilip/vim-lucius'
 " NeoBundle 'klen/rainbow_parentheses.vim'
 "
+NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'voithos/vim-python-matchit'
 NeoBundle 'tpope/vim-surround'
@@ -642,6 +643,11 @@ let g:ctrlp_max_height = 30
 " " https://github.com/c9s/perlomni.vim
 " let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " ----- end neocomplete plugin setup
+
+
+" Setting for expand
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " Settings for python-mode
 " Note: I'm no longer using this. Leave this commented out
