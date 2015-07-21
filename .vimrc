@@ -117,6 +117,7 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'mhinz/vim-signify'
+NeoBundle 'vim-scripts/EasyGrep'
 "NeoBundle 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
 NeoBundle 'kshenoy/vim-signature'
 NeoBundle 'vim-scripts/SearchComplete'
@@ -486,6 +487,7 @@ map <Space>e :NERDTreeToggle<CR>
 map <Space>t :TlistOpen<CR>
 "   close tlist on select
 let Tlist_Close_On_Select = 1
+let Tlist_Show_One_File = 1
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
@@ -687,6 +689,7 @@ set nrformats-=octal
 " Taglist setup
 "
 autocmd BufWritePost *.py :TlistUpdate
+
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
