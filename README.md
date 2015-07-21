@@ -149,6 +149,10 @@ Other Plugins
 * [terryma/vim-expand-region] 
      press v in visual mode to expand region , `<Ctrl>+v` goes back
 
+* [vim-scripts/EasyGrep]
+  `<leader><leader>vv` find
+  `<leader><leader>vr` replace
+
 Links
 ===
 
