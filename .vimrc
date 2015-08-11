@@ -350,8 +350,8 @@ inoremap <C-h> <left>
 inoremap <C-j> <right>
 
 " smash escape
-inoremap jk <esc>
-inoremap kj <esc>
+inoremap jk <esc>l
+inoremap kj <esc>l
 
 set pastetoggle=<F2>
 set clipboard=unnamed
