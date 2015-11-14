@@ -15,6 +15,9 @@ sudo apt-get instal silversearcher-ag python-autopep8
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev
 
+# ctags
+sudo apt-get install ctags 
+
 #mac os
 sudo port install py-pep8
 
