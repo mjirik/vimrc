@@ -414,7 +414,7 @@ let g:tex_comment_nospell=1
 
 " chage window with Ctrl-j
 map <c-j> <c-w>j
-map <c-k> <c-w>k
+" map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
@@ -515,7 +515,7 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
-map <leader>gc :Gcommit<CR>
+map <c-k> :Gcommit<CR>
 map <leader>gp :Git push<CR><CR>
 map <leader>gl :Git pull<CR>
 map <leader>gv :Gitv<CR>
