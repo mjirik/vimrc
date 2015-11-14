@@ -516,7 +516,7 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 "" Setting for vim-fugitive
 map <leader>gs :Gstatus<CR>
 map <c-k> :Gcommit<CR>
-map <leader>gp :Git push<CR><CR>
+map <c-K> :Git push<CR><CR>
 map <leader>gl :Git pull<CR>
 map <leader>gv :Gitv<CR>
 map <leader>gb :Gblame<CR>
