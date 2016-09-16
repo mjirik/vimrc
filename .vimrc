@@ -48,7 +48,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
   Plug 'gregsexton/gitv'
-  " Plug 'tpope/vim-fugitive'
+  "Plug 'tpope/vim-fugitive'
   Plug 'tomtom/tcomment_vim'
   Plug 'mhinz/vim-startify'
 
