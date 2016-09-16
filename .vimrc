@@ -36,48 +36,49 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-  " Plug 'tpope/vim-fugitive'
-  " Plug 'kien/ctrlp.vim'
+  Plug 'kien/ctrlp.vim'
   Plug 'bling/vim-airline'
   "Plug 'morhetz/gruvbox'
-  Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
   Plug 'vim-scripts/wombat256.vim'
+  Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'sjl/gundo.vim'
   Plug 'gerw/vim-latex-suite', {'for': 'tex'}
   "Plug 'lervag/vimtex'
+  Plug 'honza/vim-snippets'
+  Plug 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
+  Plug 'gregsexton/gitv'
+  " Plug 'tpope/vim-fugitive'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'mhinz/vim-startify'
 
-"NeoBundle 'vim-scripts/wombat256.vim'
-"NeoBundle 'vim-scripts/summerfruit256.vim'
-""
-"NeoBundle 'terryma/vim-expand-region'
-"NeoBundle 'luochen1990/rainbow'
-"NeoBundle 'voithos/vim-python-matchit'
-"NeoBundle 'tpope/vim-surround'
-"NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'Lokaltog/vim-easymotion'
-"NeoBundle 'sjl/gundo.vim'
-"NeoBundle 'kien/ctrlp.vim'
-"NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'vim-scripts/taglist.vim'
-"NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
-"NeoBundle 'tomtom/tlib_vim'  " required by snipmate
-"NeoBundle 'vim-scripts/TaskList.vim'
-"NeoBundle 'SirVer/ultisnips'
-"NeoBundle 'honza/vim-snippets'
-"NeoBundle 'alfredodeza/pytest.vim'
-"NeoBundle 'mhinz/vim-startify'
-"NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
-"NeoBundle 'tomtom/tcomment_vim'
-"NeoBundle 'mhinz/vim-signify'
-"NeoBundle 'vim-scripts/EasyGrep'
-""NeoBundle 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
-"NeoBundle 'kshenoy/vim-signature'
-"NeoBundle 'vim-scripts/SearchComplete'
-"NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"NeoBundle 'Lokaltog/vim-powerline'
-"NeoBundle 'gregsexton/gitv'
-"NeoBundle 'davidhalter/jedi-vim'
-"NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
-"NeoBundle 'Shougo/vimproc.vim', { 'build': {
+"Plug 'vim-scripts/wombat256.vim'
+"Plug 'vim-scripts/summerfruit256.vim'
+"Plug 
+"Plug 'terryma/vim-expand-region'
+"Plug 'luochen1990/rainbow'
+"Plug 'voithos/vim-python-matchit'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-fugitive'
+"Plug 'Lokaltog/vim-easymotion'
+"Plug 'kien/ctrlp.vim'
+"Plug 'scrooloose/nerdtree'
+"Plug 'vim-scripts/taglist.vim'
+"Plug 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
+"Plug 'tomtom/tlib_vim'  " required by snipmate
+"Plug 'vim-scripts/TaskList.vim'
+"Plug 'SirVer/ultisnips'
+"Plug 'alfredodeza/pytest.vim'
+"Plug 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
+"Plug 'mhinz/vim-signify'
+"Plug 'vim-scripts/EasyGrep'
+"Plug 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
+"Plug 'kshenoy/vim-signature'
+"Plug 'vim-scripts/SearchComplete'
+"Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plug 'Lokaltog/vim-powerline'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'Shougo/vimproc.vim', { 'build': {
 "      \   'windows': 'make -f make_mingw32.mak',
 "      \   'cygwin': 'make -f make_cygwin.mak',
 "      \   'mac': 'make -f make_mac.mak',
