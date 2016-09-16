@@ -18,24 +18,108 @@
 " Press <F8> to run autopep8 on it
 
 
+" plugin installer Plug
+" =====================
+"
+" Get vim-plug
+" -----------
+" download file plug.vim into autoload directory
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!mkdir ~/.vim/autoload/'
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+" Get plugins
+" -----------
+
+call plug#begin('~/.config/nvim/plugged')
+
+  " Plug 'tpope/vim-fugitive'
+  " Plug 'kien/ctrlp.vim'
+  Plug 'bling/vim-airline'
+  "Plug 'morhetz/gruvbox'
+  Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+  Plug 'vim-scripts/wombat256.vim'
+  Plug 'gerw/vim-latex-suite', {'for': 'tex'}
+  "Plug 'lervag/vimtex'
+
+"NeoBundle 'vim-scripts/wombat256.vim'
+"NeoBundle 'vim-scripts/summerfruit256.vim'
+""
+"NeoBundle 'terryma/vim-expand-region'
+"NeoBundle 'luochen1990/rainbow'
+"NeoBundle 'voithos/vim-python-matchit'
+"NeoBundle 'tpope/vim-surround'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'Lokaltog/vim-easymotion'
+"NeoBundle 'sjl/gundo.vim'
+"NeoBundle 'kien/ctrlp.vim'
+"NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'vim-scripts/taglist.vim'
+"NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
+"NeoBundle 'tomtom/tlib_vim'  " required by snipmate
+"NeoBundle 'vim-scripts/TaskList.vim'
+"NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'honza/vim-snippets'
+"NeoBundle 'alfredodeza/pytest.vim'
+"NeoBundle 'mhinz/vim-startify'
+"NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
+"NeoBundle 'tomtom/tcomment_vim'
+"NeoBundle 'mhinz/vim-signify'
+"NeoBundle 'vim-scripts/EasyGrep'
+""NeoBundle 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
+"NeoBundle 'kshenoy/vim-signature'
+"NeoBundle 'vim-scripts/SearchComplete'
+"NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"NeoBundle 'Lokaltog/vim-powerline'
+"NeoBundle 'gregsexton/gitv'
+"NeoBundle 'davidhalter/jedi-vim'
+"NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
+"NeoBundle 'Shougo/vimproc.vim', { 'build': {
+"      \   'windows': 'make -f make_mingw32.mak',
+"      \   'cygwin': 'make -f make_cygwin.mak',
+"      \   'mac': 'make -f make_mac.mak',
+"      \   'unix': 'make -f make_unix.mak',
+"      \ } }
+"" NeoBundle 'vim-scripts/ctrlp-funky'
+"NeoBundleLazy 'tell-k/vim-autopep8', {
+"    \ 'autoload' : { 'filetypes' : ['python'] }
+"    \ }
+"   " \ 'load_ftdetect' : 1,
+"NeoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
+"    \ 'autoload' : { 'filetypes' : ['python'] }
+"    \ }
+"" " NeoBundleLazy 'klen/python-mode', {
+"" "     \ 'autoload' : { 'filetypes' : ['python'] }
+"" "     \ }
+"" NeoBundleLazy 'scrooloose/syntastic', {
+""     \ 'autoload' : { 'filetypes' : ['python'] }
+""     \ }
+
+
+call plug#end()
+
+
 
 set nocompatible              " Don't be compatible with vi
 
 let mapleader=","             " change the leader to be a comma vs slash
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
-command! W :w
-
-fu! SplitScroll()
-    :wincmd v
-    :wincmd w
-    execute "normal! \<C-d>"
-    :set scrollbind
-    :wincmd w
-    :set scrollbind
-endfu
-
-nmap <leader>sb :call SplitScroll()<CR>
+" command! W :w
+" 
+" fu! SplitScroll()
+"     :wincmd v
+"     :wincmd w
+"     execute "normal! \<C-d>"
+"     :set scrollbind
+"     :wincmd w
+"     :set scrollbind
+" endfu
+" 
+" nmap <leader>sb :call SplitScroll()<CR>
 
 
 "<CR><C-w>l<C-f>:set scrollbind<CR>
@@ -56,23 +140,23 @@ filetype off
 "========
 "
 " Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
+"et iCanHazVundle=1
 "let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-let vundle_readme=expand('~/.vim/bundle/neobundle/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing NeoBundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    "silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    silent !git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle
-
-    let iCanHazVundle=0
-endif
+"et vundle_readme=expand('~/.vim/bundle/neobundle/README.md')
+"f !filereadable(vundle_readme)
+"   echo "Installing NeoBundle.."
+"   echo ""
+"   silent !mkdir -p ~/.vim/bundle
+"   "silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+"   silent !git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle
+"
+"   let iCanHazVundle=0
+"ndif
 "set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/neobundle/
+"et rtp+=~/.vim/bundle/neobundle/
 "call vundle#rc()
 "call neobundle#rc(expand('~/.vim/bundle'))
-call neobundle#begin(expand('~/.vim/bundle'))
+"all neobundle#begin(expand('~/.vim/bundle'))
 "Bundle 'gmarik/vundle'
 " NeoBundle 'garbas/vim-snipmate'
 " NeoBundle 'altercation/vim-colors-solarized'
@@ -86,80 +170,80 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " replaced by
 " NeoBundle 'Shougo/neocomplete.vim'
 " end of unused modules
-
-NeoBundle 'Shoguo/neobundle'
-
+"
+"eoBundle 'Shoguo/neobundle'
+"
 " Colormaps
-NeoBundle 'vim-scripts/wombat256.vim'
-NeoBundle 'vim-scripts/summerfruit256.vim'
 " NeoBundle 'altercation/vim-colors-solarized'
 " NeoBundle 'vim-scripts/pyte'
 " NeoBundle 'jonathanfilip/vim-lucius'
 " NeoBundle 'klen/rainbow_parentheses.vim'
+"eoBundle 'vim-scripts/wombat256.vim'
+"eoBundle 'vim-scripts/summerfruit256.vim'
 "
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'luochen1990/rainbow'
-NeoBundle 'voithos/vim-python-matchit'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
-NeoBundle 'tomtom/tlib_vim'  " required by snipmate
-NeoBundle 'vim-scripts/TaskList.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'alfredodeza/pytest.vim'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'mhinz/vim-signify'
-NeoBundle 'vim-scripts/EasyGrep'
+"eoBundle 'terryma/vim-expand-region'
+"eoBundle 'luochen1990/rainbow'
+"eoBundle 'voithos/vim-python-matchit'
+"eoBundle 'tpope/vim-surround'
+"eoBundle 'tpope/vim-fugitive'
+"eoBundle 'Lokaltog/vim-easymotion'
+"eoBundle 'sjl/gundo.vim'
+"eoBundle 'kien/ctrlp.vim'
+"eoBundle 'scrooloose/nerdtree'
+"eoBundle 'vim-scripts/taglist.vim'
+"eoBundle 'MarcWeber/vim-addon-mw-utils'  " required by snipmate
+"eoBundle 'tomtom/tlib_vim'  " required by snipmate
+"eoBundle 'vim-scripts/TaskList.vim'
+"eoBundle 'SirVer/ultisnips'
+"eoBundle 'honza/vim-snippets'
+"eoBundle 'alfredodeza/pytest.vim'
+"eoBundle 'mhinz/vim-startify'
+"eoBundle 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
+"eoBundle 'tomtom/tcomment_vim'
+"eoBundle 'mhinz/vim-signify'
+"eoBundle 'vim-scripts/EasyGrep'
 "NeoBundle 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
-NeoBundle 'kshenoy/vim-signature'
-NeoBundle 'vim-scripts/SearchComplete'
-NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'gregsexton/gitv'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
-NeoBundle 'Shougo/vimproc.vim', { 'build': {
-      \   'windows': 'make -f make_mingw32.mak',
-      \   'cygwin': 'make -f make_cygwin.mak',
-      \   'mac': 'make -f make_mac.mak',
-      \   'unix': 'make -f make_unix.mak',
-      \ } }
+"eoBundle 'kshenoy/vim-signature'
+"eoBundle 'vim-scripts/SearchComplete'
+"eoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"eoBundle 'Lokaltog/vim-powerline'
+"eoBundle 'gregsexton/gitv'
+"eoBundle 'davidhalter/jedi-vim'
+"eoBundle 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
+"eoBundle 'Shougo/vimproc.vim', { 'build': {
+"     \   'windows': 'make -f make_mingw32.mak',
+"     \   'cygwin': 'make -f make_cygwin.mak',
+"     \   'mac': 'make -f make_mac.mak',
+"     \   'unix': 'make -f make_unix.mak',
+"     \ } }
 " NeoBundle 'vim-scripts/ctrlp-funky'
-NeoBundleLazy 'tell-k/vim-autopep8', {
-    \ 'autoload' : { 'filetypes' : ['python'] }
-    \ }
-   " \ 'load_ftdetect' : 1,
-NeoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
-    \ 'autoload' : { 'filetypes' : ['python'] }
-    \ }
+"eoBundleLazy 'tell-k/vim-autopep8', {
+"   \ 'autoload' : { 'filetypes' : ['python'] }
+"   \ }
+"  " \ 'load_ftdetect' : 1,
+"eoBundleLazy 'JarrodCTaylor/vim-python-test-runner', {
+"   \ 'autoload' : { 'filetypes' : ['python'] }
+"   \ }
 " " NeoBundleLazy 'klen/python-mode', {
 " "     \ 'autoload' : { 'filetypes' : ['python'] }
 " "     \ }
 " NeoBundleLazy 'scrooloose/syntastic', {
 "     \ 'autoload' : { 'filetypes' : ['python'] }
 "     \ }
-
-
-NeoBundleLazy 'gerw/vim-latex-suite'
-
-
-autocmd FileType, tex NeoBundleSource vim-latex-suite
+"
+"
+"eoBundleLazy 'gerw/vim-latex-suite'
+"
+"
+"utocmd FileType, tex NeoBundleSource vim-latex-suite
 "...All your other bundles...
-if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :NeoBundleInstall
-endif
-
-call neobundle#end()
+"f iCanHazVundle == 0
+"   echo "Installing Bundles, please ignore key map error messages"
+"   echo ""
+"   :NeoBundleInstall
+"ndif
+"
+"all neobundle#end()
 "set rtp+=~/.vim/bundle/vundle/
 "call vundle#rc()
 "
@@ -255,7 +339,7 @@ set ffs=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
 "set report=0                " : commands always print changed line count.
 "set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
 "set ruler                   " Show some info, even without statuslines.
-"set laststatus=2            " Always show statusline, even if only 1 window.
+set laststatus=2            " Always show statusline, even if only 1 window.
 "set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 "
 """ displays tabs with :set list & displays when a line runs off-screen
@@ -309,7 +393,7 @@ set undolevels=700
 " Airline status-line should look better with fallowing lines
 " set encoding=utf-8
 " let g:airline_powerline_fonts = 1
-  set laststatus=2
+  " set laststatus=2
   " if !exists('g:airline_symbols')
   "   let g:airline_symbols = {}
   " endif
@@ -332,9 +416,9 @@ set undolevels=700
 " mjirik added
 "
 " Nahrada za python-mode
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
