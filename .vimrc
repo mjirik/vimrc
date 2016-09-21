@@ -44,7 +44,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'sjl/gundo.vim'
   Plug 'gerw/vim-latex-suite', {'for': 'tex'}
-  "Plug 'lervag/vimtex'
+  "Plug 'lervag/vimtex', {'for': 'tex'}
   Plug 'honza/vim-snippets'
   Plug 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
   Plug 'gregsexton/gitv'
