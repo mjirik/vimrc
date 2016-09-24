@@ -46,11 +46,15 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'gerw/vim-latex-suite', {'for': 'tex'}
   "Plug 'lervag/vimtex', {'for': 'tex'}
   Plug 'honza/vim-snippets'
-  Plug 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424' 
+  Plug 'aperezdc/vim-template', 'e1b2a9e23f15809d4458473f724bc7aef94eb424'
   Plug 'gregsexton/gitv'
   "Plug 'tpope/vim-fugitive'
   Plug 'tomtom/tcomment_vim'
   Plug 'mhinz/vim-startify'
+  " visualize git diff lines
+  Plug 'mhinz/vim-signify'
+  " show vim marks on ech lines
+  Plug 'kshenoy/vim-signature'
 
 "Plug 'vim-scripts/wombat256.vim'
 "Plug 'vim-scripts/summerfruit256.vim'
@@ -70,10 +74,8 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'SirVer/ultisnips'
 "Plug 'alfredodeza/pytest.vim'
 "Plug 'Shougo/unite.vim', 'b872f4add16a813ba38bfcc235cfa4be6a25953'
-"Plug 'mhinz/vim-signify'
 "Plug 'vim-scripts/EasyGrep'
 "Plug 'Valloric/YouCompleteMe' " potize s tabulatorem a snippets
-"Plug 'kshenoy/vim-signature'
 "Plug 'vim-scripts/SearchComplete'
 "Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Plug 'Lokaltog/vim-powerline'
